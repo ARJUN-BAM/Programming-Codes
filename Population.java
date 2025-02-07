@@ -1,4 +1,4 @@
-/*A villege has a population of cp and in every 7 secs a child births,13 sec a person dies and 45 secs a person migrate now calculate the total new population of the villege.*\
+/*A villege has a population of cp and in every 7 secs a child births,13 sec a person dies and 45 secs a person migrate now calculate the total new population of the villege.*/
 
 
 class Population

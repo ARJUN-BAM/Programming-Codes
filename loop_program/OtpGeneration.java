@@ -6,11 +6,13 @@ class OtpGeneration
 		System.out.print("Enter a Number : ");
 		int num = new Scanner(System.in).nextInt();
 		String s = "";
-		for(int i = 0;i<num;)
+		int i = 0;
+		while(i<num)
 		{
-			s += (Math.random()*100000);
+			s += (int)((Math.random())*100000);
 			if(s.length()==6)
 			{
+				
 				System.out.println(s);
 				i++;
 			}

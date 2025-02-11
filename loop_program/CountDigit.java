@@ -3,7 +3,7 @@ class CountDigit
 {
 	public static void main(String[] args)
 	{
-		long num = 1214314131657248l;
+		long num = 1214314131243232343l;
 		int max = 0,dgt = 0;
 		
 		for(int i=0;i<=9;i++)	
@@ -21,5 +21,6 @@ class CountDigit
 				
 			}
 		}
+		System.out.print(dgt+" : "+max);
 	}
 }

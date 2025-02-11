@@ -1,4 +1,4 @@
-package loop;
+package loop_program;
 import java.util.Scanner;
 class EvenSumDigit
 {

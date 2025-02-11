@@ -1,4 +1,5 @@
-package loop;
+package loop_program;
+
 import java.util.Scanner;
 public class SumOfFactOfDigit {
     public static void main(String[] args) {

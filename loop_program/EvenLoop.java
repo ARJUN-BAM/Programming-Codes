@@ -1,4 +1,4 @@
-package loop;
+package loop_program;
 class EvenLoop
 {
 	public static void main(String[] args)

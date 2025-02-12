@@ -6,6 +6,8 @@ class Emirp
 		System.out.print("Enter a Number : ");
 		int num = sc.nextInt();
 		int dup=num;
+		int rev = 0;
+		boolean flag = false;
 		for(int i=2;i<=(num/2);i++)
 		{
 			if(num%i==0)
@@ -13,26 +15,26 @@ class Emirp
 				System.out.println("Number is not a Emirp");
 				System.exit(0);
 			}
-		}
-		int rev = 0;
-		for(int i=num;i>0;i/=10)
-		{
-			rev=rev*10+(i%10);
-		}
-		if(rev==dup)
-		{
-			System.out.println("Number is not a Emirp");
-			System.exit(0);
-		}
-
-		for(int i=2;i<=(rev/2);i++)
-		{
-			if(rev%i==0)
+			else if(i==(num/2)&&flag==false)
 			{
-				System.out.println("Number is not a Emirp");
-				System.exit(0);
+				for(int j=num;j>0;j/=10)
+				{
+					rev=rev*10+(j%10);
+				}
+				if(rev==dup)
+				{
+					System.out.println("Number is not a Emirp");
+					System.exit(0);
+				}else{
+					num=rev;
+					flag = true;
+					i=2;
+				}
+				
 			}
 		}
 		System.out.println("It is a Emirp Number");
+		
+		
 	}
 }

@@ -9,7 +9,7 @@ class OtpGeneration
 		int i = 0;
 		while(i<num)
 		{
-			s += (int)((Math.random())*100000);
+			s += (int)((Math.random())*1000000);
 			if(s.length()==6)
 			{
 				

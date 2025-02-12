@@ -12,7 +12,7 @@ class RevString
 			s1+=(i==0)?((char)(s.charAt(i)+32)):((i==(s.length()-1)))?((char)(s.charAt(i)-32)):(s.charAt(i));
 			i--;
 		}
-		System.out.println(s+"'s reverse is "+s1);
+		System.out.println(s+" : "+s1);
 		if(s.equals(s1))
 		{
 			System.out.println("It is a Palindrom String");

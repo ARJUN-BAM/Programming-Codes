@@ -34,10 +34,38 @@ Constraints:
 s consists of parentheses only '()[]{}'. */
 
 
+
+
+/*
+
+
+import java.util.Scanner;
 class ValidPar
 {
     public static void main(String[] args) {
-        String str = "([)]";
+        System.out.print("Enter a string of Paranthesis : ");
+        String str = new Scanner(System.in).next();
+
+
+
+
+    }
+}
+
+
+*/
+
+
+
+
+
+
+import java.util.Scanner;
+class ValidPar
+{
+    public static void main(String[] args) {
+        System.out.print("Enter a string of Paranthesis : ");
+        String str = new Scanner(System.in).next();
         for(int i = 0;i<str.length();i++)
         {
             if(str.charAt(i)=='a') 
@@ -47,14 +75,17 @@ class ValidPar
             else if(str.charAt(i)=='(')
             {
                 int j;
+                int cnt=0;
                 for( j = i+1;j<str.length();j++)
                 {
-                    if(str.charAt(j)==')')
+                    if(str.charAt(j)==')'&&cnt%2==0)
                     {
-                        str = str.substring(0, j) + 'a'
-              + str.substring(j + 1);
+                        str = str.substring(0, j) + 'a'+ str.substring(j + 1);
+                        System.out.println(str);
                         break;
                     }
+
+                    cnt++;
                 }
                 if(j==str.length())
                 {
@@ -66,14 +97,19 @@ class ValidPar
             else if(str.charAt(i)=='[')
             {
                 int j;
+                int cnt=0;
                  for(j = i+1;j<str.length();j++)
                 {
-                    if(str.charAt(j)==']')
+                    if(str.charAt(j)==']'&&cnt%2==0)
                     {
-                       str = str.substring(0, j) + 'a'
-              + str.substring(j + 1);
+                       str = str.substring(0, j) + 'a'+ str.substring(j + 1);
+                        System.out.println(str);
+
                         break;
                     }
+                    cnt++;
+
+
                 }
                 if(j==str.length())
                 {
@@ -85,14 +121,18 @@ class ValidPar
             else if(str.charAt(i)=='{')
             {
                 int j;
+                int cnt =0;
                  for(j = i+1;j<str.length();j++)
                 {
-                    if(str.charAt(j)=='}')
+                    if(str.charAt(j)=='}'&&cnt%2==0)
                     {
-                       str = str.substring(0, j) + 'a'
-              + str.substring(j + 1);
+                       str = str.substring(0, j) + 'a'+ str.substring(j + 1);
+                        System.out.println(str);
                         break;
                     }
+                    cnt++;
+
+
                 }
                 if(j==str.length())
                 {

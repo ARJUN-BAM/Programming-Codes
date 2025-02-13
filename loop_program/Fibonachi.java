@@ -1,15 +1,17 @@
+// 0 1 1 2 3 5 8 13 21 34 55 89 144 233/ 
 class Fibonachi
 {
 	public static void main(String[] args) {
 		int sum = 0;
+		System.out.print((sum++)+" ");
 		int temp = sum;
-		System.out.println((sum)+" ");
 		int t=0;
-		for(int i=0;i<10;i++)
+		for(int i=0;i<20;i++)
 		{
-			sum +=temp;
 			System.out.print(" "+sum+" ");
-
+			temp=t;
+			t=sum;
+			sum=sum+temp;			
 		}
 	}
 }

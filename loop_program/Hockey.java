@@ -1,59 +1,28 @@
 class Hockey
 {
 	public static void main(String[] args) {
-		String num = "01101101111110";
-		int cnt = 0;
-		outer :
+		String num = "011011111110001110";
+		int cnt1=0,cnt0=0;
 		for(int i = 0;i<num.length();i++)
 		{
-			if(num.charAt(i)=='0')
-			{
-				int n = 0;
-				while(n<7&&(i+n)<=num.length())
-				{
-					if(num.charAt(n+i)=='0')
-						n++;
-					else
-					{
-						i=n-1;
-						continue outer;
-					}
-				}
-			
-				if(n==7)
-				{
-					System.out.println("dengerous");
-					System.exit(0);
-				}
-				else{
-					i=n-1;
-					continue outer;
-				}
+			char ch = num.charAt(i);
+			if(ch=='1')
+				cnt1++;
+			else if(ch=='0')
+				cnt0++;
+			else{
+				cnt1=0;
+				cnt0=0;
 			}
-			else if(num.charAt(i)=='1')
+			if(cnt1==7||cnt0==7)
 			{
-				int n = 0;
-				while(n<7&&(i+n)<=num.length()){
-					if(num.charAt(n+i)=='1')
-						n++;
-					else
-						{i=n-1;
-							continue outer;}
-				}
-				if(n==7)
-				{
-					System.out.println("dengerous");
-					System.exit(0);
-				}
-				else{
-					i=n-1;
-					continue outer;
-				}
+				System.out.println("Yes");
+				System.exit(0);
 			}
-
-
 		}
-		System.out.println("NOt dengerous");
-					
+		System.out.println("No");
+
+		//System.out.println((num.contains("1111111")||num.contains("0000000"))?("YES"):("NO"));
+						
 	}
 }

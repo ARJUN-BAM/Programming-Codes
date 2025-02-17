@@ -20,7 +20,7 @@ class Hockey
 				System.exit(0);
 			}
 		}
-		System.out.println("No");
+		System.out.println("No"); 
 
 		//System.out.println((num.contains("1111111")||num.contains("0000000"))?("YES"):("NO"));
 						

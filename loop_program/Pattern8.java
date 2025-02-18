@@ -3,26 +3,23 @@ class Pattern8
 	public static void main(String [] args)
 	{
 		int n = 7;
-		int m = 2;
+		int m = 1;
 		int temp = 1;
-		for(int i = 1;i<=5;i++)
+		for(int i = 1;i<=4;i++)
 		{
-			int t =i;
-			for(int j =1;j<=i;j++)
+			System.out.print(i+" ");
+			int t=i;
+			for(int j =2;j<=5;j++)
 			{
-				System.out.print(t+" ");
-				if(j%2==1&&i<1)
-				{
-					t-=m;
-				}
-				else{
+				if(j%2==0)
 					t+=n;
-				}
+				else
+					t+=m;
+				System.out.print(t+" ");
 			}			
 			n-=2;
-			System.out.println();
-			if(i>2)
-				m+=2;
+			m+=2;
+			System.out.println();	
 		}
 	}
 }
@@ -30,10 +27,9 @@ class Pattern8
 
 /*
 
-1
-2 9 
-3 8 10
-4 7 11 14 
-5 6 12 13 15
+1 8 9 16 17
+2 7 10 15 18
+3 6 11 14 19
+4 5 12 13 20
 
 */

@@ -3,16 +3,18 @@ class Pattern6
 {
 	public static void main(String [] args)
 	{
-		int num = 1;
-		int temp=4;
+	\
+		
 		for(int i = 1;i<=5;i++)
 		{
-			num = i;
+			int t =i;
+			int temp = 4;
 			for(int j =1;j<=i;j++)
 			{
-				System.out.print((i)+" ");
-			}
-			temp--;
+				System.out.print((t)+" ");
+				t+=(temp--);
+			}			
+			
 			System.out.println();
 		}
 	}

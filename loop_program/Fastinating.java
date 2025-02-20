@@ -5,10 +5,10 @@ class Fastinating
 	{
 		Scanner sc = new Scanner(System.in);
 		
-		//for(int k =1;k<=1000;k++)
-		//{
+		for(int k =1;k<=1000;k++)
+		{
 			//String s = "";
-			int num = 357;
+			int num = k;
 			// for(int i = 1;i<=3;i++)
 			// {
 			// 		int t = num*i;
@@ -17,7 +17,7 @@ class Fastinating
 			// }
 			// String[] arr = s.split("");
 			// String cs = arr[0];
-			// boolean flag = true;
+			boolean flag = true;
 
 			// Arrays.sort(arr);
 			// if(arr.contains("0")||arr.length!=9)
@@ -63,25 +63,33 @@ class Fastinating
 				}
 			}
 		*/
-			//Another Method
-			
 
 			int temp = num;
 			for(int i = 2;i<=3;i++)
 			{
 				num = (num*1000) + (temp*i);
 				
+			}				
+			for(int j=0;j<=9;j++)
+			{
+				int cnt=0;
+				for(int i = num;i>0;i/=10)
+				{
+					if(i%10==j)
+						cnt++;
+				}
+				if(cnt==1){
+					continue;
+				}
+				else{
+					flag = false;
+					break;
+				}
 			}
-			System.out.println(num);
-			int sum=0;
-			for(int i = num;i>0;i/=10)
-				sum+=(i%10);
-
-			if(sum==45)
-				System.out.print(temp+" is a Fasinating Number.");
-			else
-				System.out.println(temp+" is Not a Fasinating Number.");
+			if(flag)
+				System.out.println(temp+" ");
 			
+		}
 
 	}
 }

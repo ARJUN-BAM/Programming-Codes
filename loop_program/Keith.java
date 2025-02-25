@@ -17,7 +17,6 @@ class Keith
 			arr[i]=rem;
 			num/=10;
 		}
-			System.out.println(Arrays.toString(arr));
 
 		int sum = 0;
 		int index = 0;

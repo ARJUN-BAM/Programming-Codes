@@ -14,7 +14,7 @@ class IncresingNumber
 		for(int i = num;i>0;i/=10){
 			int rem = i%10;
 			
-			if(temp<rem){
+			if(temp<rem||temp==rem){
 				temp=rem;
 				
 			}	
@@ -26,7 +26,7 @@ class IncresingNumber
 		
 		for(int i = num;i>0;i/=10){
 			int rem = i%10;
-			if(temp1>rem){
+			if(temp1>rem||temp1==rem){
 				temp1=rem;
 				
 			}	

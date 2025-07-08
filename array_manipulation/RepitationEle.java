@@ -12,13 +12,13 @@ public class RepitationEle {
 
     public static void repEle(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            int ele = arr[i], count = 1, j = i+1;
-            while (j<arr.length && ele == arr[j]) {
+            int ele = arr[i], count = 1, j = i + 1;
+            while (j < arr.length && ele == arr[j]) {
                 count++;
                 j++;
             }
-            i = j-1;
-            System.out.println(ele + ": " + count +" " + i);
+            i = j - 1;
+            System.out.println(ele + " repeats: " + count + " times");
         }
     }
 
